@@ -3,182 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI工具导航 | 您的AI工具大全</title>
+    <title>AI导航 | AI工具集合网站</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
         }
         .container {
-            width: 90%;
             max-width: 1200px;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
+            margin: 0 auto;
+            padding: 0 15px;
         }
         header {
-            background: #333;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
-        header h1 {
-            margin: 0;
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
         }
-        nav {
-            background: #444;
-            padding: 0.5rem 0;
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
         }
         nav ul {
-            padding: 0;
             list-style: none;
-            text-align: center;
+            display: flex;
         }
         nav ul li {
-            display: inline;
-            margin: 0 10px;
+            margin-left: 20px;
         }
         nav ul li a {
-            color: #fff;
             text-decoration: none;
+            color: #333;
+        }
+        .main-content {
+            margin-top: 70px;
+            padding: 20px 0;
         }
         .category {
-            background: #fff;
-            padding: 15px;
-            margin-bottom: 20px;
+            background-color: #fff;
             border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+            margin-bottom: 20px;
+            overflow: hidden;
         }
-        .category h2 {
-            margin-top: 0;
-            color: #333;
-            border-bottom: 2px solid #0099ff;
-            padding-bottom: 10px;
+        .category-header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            font-size: 18px;
+            font-weight: bold;
         }
-        .tool-list {
-            list-style: none;
-            padding: 0;
+        .tool-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 15px;
+            padding: 15px;
         }
-        .tool-list li {
-            background: #f9f9f9;
-            padding: 10px;
-            border: 1px solid #e0e0e0;
+        .tool-item {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
             border-radius: 5px;
-            transition: all 0.3s ease;
+            padding: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
         }
-        .tool-list li:hover {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transform: translateY(-3px);
+        .tool-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,.1);
         }
-        .tool-list a {
-            color: #333;
+        .tool-item a {
             text-decoration: none;
-            display: block;
+            color: #333;
         }
-        .tool-list a:hover {
-            color: #0099ff;
+        .tool-item img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
         }
         footer {
-            text-align: center;
-            padding: 1rem 0;
-            background: #333;
+            background-color: #343a40;
             color: #fff;
-            margin-top: 20px;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1><span style="color: #0099ff;">AI</span>工具导航</h1>
+            <div class="header-content">
+                <div class="logo">AI导航</div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#about">关于</a></li>
+                        <li><a href="#contact">联系我们</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#home">首页</a></li>
-            <li><a href="#about">关于</a></li>
-            <li><a href="#contact">联系我们</a></li>
-        </ul>
-    </nav>
 
-    <div class="container">
-        <section id="main">
+    <div class="main-content">
+        <div class="container">
             <div class="category">
-                <h2>AI聊天机器人</h2>
-                <ul class="tool-list">
-                    <li><a href="https://chat.openai.com/">ChatGPT</a></li>
-                    <li><a href="https://www.bing.com/new">New Bing</a></li>
-                    <li><a href="https://bard.google.com/">谷歌 Bard</a></li>
-                    <li><a href="https://yiyan.baidu.com/">文心一言</a></li>
-                    <li><a href="https://www.anthropic.com/">Claude</a></li>
-                    <li><a href="https://lmsys.org/chat/">LMSYS Chat</a></li>
-                </ul>
+                <div class="category-header">AI聊天机器人</div>
+                <div class="tool-grid">
+                    <div class="tool-item">
+                        <a href="https://chat.openai.com/">
+                            <img src="https://ai-nav.net/img/chatgpt.png" alt="ChatGPT">
+                            <div>ChatGPT</div>
+                        </a>
+                    </div>
+                    <div class="tool-item">
+                        <a href="https://www.bing.com/new">
+                            <img src="https://ai-nav.net/img/newbing.png" alt="New Bing">
+                            <div>New Bing</div>
+                        </a>
+                    </div>
+                    <div class="tool-item">
+                        <a href="https://bard.google.com/">
+                            <img src="https://ai-nav.net/img/bard.png" alt="Google Bard">
+                            <div>谷歌 Bard</div>
+                        </a>
+                    </div>
+                    <div class="tool-item">
+                        <a href="https://yiyan.baidu.com/">
+                            <img src="https://ai-nav.net/img/yiyan.png" alt="文心一言">
+                            <div>文心一言</div>
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <div class="category">
-                <h2>AI绘画</h2>
-                <ul class="tool-list">
-                    <li><a href="https://www.midjourney.com/">Midjourney</a></li>
-                    <li><a href="https://stability.ai/">Stable Diffusion</a></li>
-                    <li><a href="https://openai.com/dall-e-2/">DALL-E 2</a></li>
-                    <li><a href="https://www.adobe.com/sensei/generative-ai/firefly.html">Adobe Firefly</a></li>
-                    <li><a href="https://dreamstudio.ai/">DreamStudio</a></li>
-                </ul>
+                <div class="category-header">AI绘画</div>
+                <div class="tool-grid">
+                    <div class="tool-item">
+                        <a href="https://www.midjourney.com/">
+                            <img src="https://ai-nav.net/img/midjourney.png" alt="Midjourney">
+                            <div>Midjourney</div>
+                        </a>
+                    </div>
+                    <div class="tool-item">
+                        <a href="https://stability.ai/">
+                            <img src="https://ai-nav.net/img/stablediffusion.png" alt="Stable Diffusion">
+                            <div>Stable Diffusion</div>
+                        </a>
+                    </div>
+                    <div class="tool-item">
+                        <a href="https://openai.com/dall-e-2/">
+                            <img src="https://ai-nav.net/img/dalle2.png" alt="DALL-E 2">
+                            <div>DALL-E 2</div>
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <div class="category">
-                <h2>AI写作</h2>
-                <ul class="tool-list">
-                    <li><a href="https://www.notion.so/product/ai">Notion AI</a></li>
-                    <li><a href="https://www.jasper.ai/">Jasper</a></li>
-                    <li><a href="https://www.copy.ai/">Copy.ai</a></li>
-                    <li><a href="https://www.grammarly.com/">Grammarly</a></li>
-                    <li><a href="https://quillbot.com/">QuillBot</a></li>
-                </ul>
-            </div>
-
-            <div class="category">
-                <h2>AI音频处理</h2>
-                <ul class="tool-list">
-                    <li><a href="https://murf.ai/">Murf AI</a></li>
-                    <li><a href="https://www.descript.com/">Descript</a></li>
-                    <li><a href="https://podcast.adobe.com/">Adobe Podcast</a></li>
-                    <li><a href="https://elevenlabs.io/">ElevenLabs</a></li>
-                    <li><a href="https://www.resemble.ai/">Resemble AI</a></li>
-                </ul>
-            </div>
-
-            <div class="category">
-                <h2>AI视频处理</h2>
-                <ul class="tool-list">
-                    <li><a href="https://runwayml.com/">Runway</a></li>
-                    <li><a href="https://www.synthesia.io/">Synthesia</a></li>
-                    <li><a href="https://www.d-id.com/">D-ID</a></li>
-                    <li><a href="https://www.capcut.com/">CapCut</a></li>
-                </ul>
-            </div>
-
-            <div class="category">
-                <h2>AI编程辅助</h2>
-                <ul class="tool-list">
-                    <li><a href="https://github.com/features/copilot">GitHub Copilot</a></li>
-                    <li><a href="https://www.tabnine.com/">Tabnine</a></li>
-                    <li><a href="https://www.codium.ai/">CodiumAI</a></li>
-                    <li><a href="https://www.replit.com/">Replit</a></li>
-                </ul>
-            </div>
-        </section>
+            <!-- 可以继续添加更多类别 -->
+        </div>
     </div>
 
     <footer>
-        <p>版权所有 &copy; 2024 AI工具导航</p>
+        <div class="container">
+            <p>&copy; 2024 AI导航 | AI工具集合网站</p>
+        </div>
     </footer>
+
+    <script>
+        // 添加平滑滚动效果
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-Last edited 5 分前
